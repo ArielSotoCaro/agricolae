@@ -46,7 +46,7 @@ function (treatment, means, alpha, pvalue, console)
   w<-data.frame(w,stat=M)
   trt <- as.character(w$treatment)
   means <- as.numeric(w$means)
-  output <- data.frame(means, groups=M)
-  rownames(output)<-trt
-  invisible(output)
+  output <- data.frame(Treatments=trt, means, groups=M)
+  #rownames(output)<-trt
+  invisible(arrange(output,trt))
 }
