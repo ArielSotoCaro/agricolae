@@ -1,6 +1,7 @@
 orderPvalue <-
 function (treatment, means, alpha, pvalue, console) 
 {
+  require(dplyr)
   n <- length(means)
   z <- data.frame(treatment, means)
   letras<-c(letters[1:26],LETTERS[1:26],1:9,
